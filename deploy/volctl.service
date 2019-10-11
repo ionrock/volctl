@@ -1,0 +1,13 @@
+[Unit]
+Description=Volume Control
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/volctl-web
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
